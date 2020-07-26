@@ -5,6 +5,16 @@ import (
 	"testing"
 )
 
+func TestForeachReturn(t *testing.T) {
+	var list = []int{1, 2, 3, 4, 5, 6}
+	funk.ForEach(list, func(i int) {
+		if i == 5 {
+			return
+		}
+		t.Logf("i = %d", i)
+	})
+}
+
 func TestToMap(t *testing.T) {
 	var elements = []string{"abc", "def", "fgi", "adi"}
 

@@ -16,3 +16,11 @@ func TestMurmurHash(t *testing.T) {
 	}
 	t.Log(bucketMap)
 }
+
+func TestHash(t *testing.T) {
+	var str = "xxxyyyzzz"
+	var murmur32 = murmur64(str)
+	var md5hash = md5Hash(str)
+	t.Logf("murmur32: %x", murmur32)
+	t.Logf("md5hash: %x", md5hash)
+}

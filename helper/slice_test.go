@@ -36,6 +36,13 @@ func assign(grade *OrganizationSchoolGrade) {
 	//grade.SchoolGradeName = "xxx_yyy_zzz"
 }
 
+func TestSliceDefaultLenAndCap(t *testing.T) {
+	var intSlice []int64
+	var gradeSlice []*OrganizationSchoolGrade
+	t.Logf("intSlice len = %d, cap = %d", len(intSlice), cap(intSlice))
+	t.Logf("gradeSlice len = %d, cap = %d", len(gradeSlice), cap(gradeSlice))
+}
+
 func TestSliceUpdate(t *testing.T) {
 	var grade = &OrganizationSchoolGrade{Id: 1003, SchoolId: 3}
 	var grades = []*OrganizationSchoolGrade{
