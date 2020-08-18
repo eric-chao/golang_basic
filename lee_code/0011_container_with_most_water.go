@@ -1,5 +1,6 @@
 package lee_code
 
+// 有重复计算
 func maxArea(height []int) int {
 	var length = len(height)
 	if length < 2 {
@@ -14,20 +15,4 @@ func maxArea(height []int) int {
 	}
 
 	return maxArea
-}
-
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-
-	return y
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-
-	return y
 }
