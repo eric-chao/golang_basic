@@ -16,3 +16,16 @@ func TestSingleLinkList(t *testing.T) {
 	fiveElem := singleLink.Get(5)
 	t.Logf("The 5th elem is %v", fiveElem)
 }
+
+func TestLinkSwap(t *testing.T) {
+	var head = NewSingleLink()
+	var s = []int{1, 2, 3, 4, 5}
+	for i, e := range s {
+		head.Insert(i, Elem(e))
+	}
+	var n = head
+	for n != nil {
+		t.Logf("Val: %+v", n.E)
+		n = n.Next
+	}
+}
