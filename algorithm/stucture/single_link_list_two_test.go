@@ -2,6 +2,7 @@ package stucture
 
 import (
 	"fmt"
+	"github.com/eric-chao/golang_basic/algorithm/practice"
 	"testing"
 )
 
@@ -38,12 +39,12 @@ func TestLinkSwap2(t *testing.T) {
 	var r = NewLinkList()
 	var n = l.Head
 	for n != nil {
-		var f = &Node{Val: n.Val}
-		var s *Node
+		var f = &practice.Node{Val: n.Val}
+		var s *practice.Node
 		if n.Next == nil {
 			s = nil
 		} else {
-			s = &Node{Val: n.Next.Val}
+			s = &practice.Node{Val: n.Next.Val}
 		}
 
 		if r.Head == nil {
