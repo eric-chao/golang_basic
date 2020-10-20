@@ -7,14 +7,11 @@ func main() {
 
 	key := "two"
 	elem, ok := m["two"]
-	fmt.Printf("The element paired with key %q in nil map: %d (%v)\n",
-		key, elem, ok)
+	fmt.Printf("The element paired with key %q in nil map: %d (%v)\n", key, elem, ok)
 
-	fmt.Printf("The length of nil map: %d\n",
-		len(m))
+	fmt.Printf("The length of nil map: %d\n", len(m))
 
-	fmt.Printf("Delete the key-element pair by key %q...\n",
-		key)
+	fmt.Printf("Delete the key-element pair by key %q...\n", key)
 	delete(m, key)
 
 	elem = 2
